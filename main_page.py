@@ -95,6 +95,10 @@ if len(survey_filenames) == 0:
     survey_filenames = []
     survey_filenames.append("https://github.com/JulianOstertag/Neuromonitoring_Survey/raw/main/Completed_Surveys.xlsx")
     survey_filenames.append("https://github.com/JulianOstertag/Neuromonitoring_Survey/raw/main/Question_Names.xlsx")
+elif len(survey_filenames) == 1:
+    survey_filenames.append("https://github.com/JulianOstertag/Neuromonitoring_Survey/raw/main/Question_Names.xlsx")
+
+
 raw_data, question_names = load_dataframe(survey_filenames)
 value_map = {1: '<1', 2: '1-5', 3: '>5'}
 raw_data["Q2"] = raw_data['Q2'].replace(value_map)
