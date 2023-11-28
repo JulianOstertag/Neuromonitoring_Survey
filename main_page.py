@@ -2,7 +2,6 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 import plotly.graph_objs as go
-import requests
 ############################            STREAMLIT LAYOUT             ##########################################################
 st.set_page_config(layout="wide",page_title="Current State of EEG-based Neuromonitoring - Results from an international survey")
 
