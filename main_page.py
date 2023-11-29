@@ -20,11 +20,11 @@ def calculate_percentages(data_frame,sort_name,label_order):
     percentage_df = percentage_df.round(2)
     # Transpose the DataFrame for plotting
     percentage_df = percentage_df.T
-    percentage_df = percentage_df.sort_values(by = sort_name, ascending=True)
-    percentage_df.fillna(0, inplace=True)
     for answer in label_order:
         if answer not in percentage_df:
             percentage_df[answer] = float(0)
+    percentage_df = percentage_df.sort_values(by = sort_name, ascending=True)
+    percentage_df.fillna(0, inplace=True)
     percentage_df = percentage_df[label_order]
     return percentage_df
 
